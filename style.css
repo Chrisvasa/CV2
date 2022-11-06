@@ -1,0 +1,50 @@
+:root {
+  --nav: rgb(36, 36, 36);
+  --main: rgb(27, 27, 27);
+  --logo: rgb(255, 166, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+  height: 100vh;
+}
+
+nav {
+  background: var(--nav);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.active {
+  color: darkgray;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--logo);
+}
+
+.nav-button-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+main {
+  background: var(--main);
+  display: grid;
+}
