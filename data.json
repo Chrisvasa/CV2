@@ -1,0 +1,117 @@
+{
+    "about": {
+        "name": "Christopher Vasankari",
+        "label": "Student",
+        "age": "28",
+        "email": "Christophervasankari@gmail.com",
+        "phone": "0707287726",
+        "location": {
+            "adress": "Hagvägen 43",
+            "postalCode": "19440",
+            "city": "Upplands Väsby"
+        },
+        "portfolio": "https://github.com/Chrisvasa",
+        "description": "En man på 28 år som för närvarande studerar hos ChasAcademy i Stockholm. Alltid haft ett stort intresse för datorer, men först nu tagit klivet att omvandla detta intresse till en framtida karriär. "
+
+    },
+    "work": [{ 
+        "name": "Lindekrans Plåtslageri",
+        "startDate": "2014-08-28",
+        "endDate": "2015-06-10",
+        "description": "Detta ingick i en vuxenutbildning jag läste för att utbilda mig som byggnadsplåtslagare. Arbetade under praktiken med takläggning inom Stockholm, men var även ute på mindre projekt i Bålsta. Mot slutskedet av praktiken fick jag vara med och planera mindre projekt samt slutföra dessa på egen hand. På mindre byggen fick man även erfarenhet med kundkontakt."
+    },
+    {
+        "name": "Taksnöskottare - Märsta kommun",
+        "startDate": "2012-11",
+        "endDate": "2014",
+        "description": "Säsongsarbetade som snöskottare i olika lokationer i Märsta."
+    },
+    {
+        "name": "Byggnadsplåtslageri",
+        "startDate": "2015-07-01",
+        "endDate": "2017-01-08",
+        "description": "Arbetade som lärling där jag fick ansvara för flera mindre projekt. Från planeringsstadiet till installationen."
+    }],
+    "education": [
+    {
+        "school": "Malmö Universitet",
+        "courses": [
+            "Programmering C#",
+            "Webbutveckling"
+        ],
+        "startDate": "2022-01-07",
+        "endDate": "2022-06-10",
+        "description": "Läste under vårterminen kurser inom Webbutveckling (html och css) samt en programmeringskurs inom C#. Det ingick mindre projektarbeten. "
+    },
+    {
+        "school": "Tidigare Universitetskurser",
+        "courses": [
+            "Geografi A",
+            "Datorsäkerhet",
+            "Grundkurs IT",
+            "Matematik",
+            "Fysik"
+        ],
+        "startDate": "2017-08",
+        "endDate": "2021",
+        "description": "Har under dessa år studerat olika kurser och program på universitet, på campus men även distans."
+    },
+    {
+        "school": "Komvux",
+        "courses": [
+            "Matematik 2b",
+            "Matematik 3b",
+            "Fysik 1a",
+            "Programmering 1"
+        ],
+        "startDate": "2015",
+        "endDate": "2016",
+        "description": "Läste klart för slutbetyg"
+    },
+    {
+        "school": "Vuxenutbildning",
+        "courses": [
+            "Plåtslageri",
+            "Praktik"
+        ],
+        "startDate": "2014",
+        "endDate": "2015",
+        "description": "Gick en yrkesutbildning för att utbilda mig som byggnadsplåtslagare. Den största delen av utbildningen spenderades ute på praktik."
+    }],
+    "skills": [
+        {
+            "name": "Webbutveckling",
+            "level": "",
+            "keywords": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        },
+        {
+            "name": ".NET",
+            "level": "",
+            "keywords": [
+                "C#"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Webbutveckling",
+            "description": "",
+            "keywords": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        },
+        {
+            "name": ".NET",
+            "level": "",
+            "keywords": [
+                "C#"
+            ]
+        }
+    ]
+}
