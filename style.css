@@ -21,7 +21,7 @@ body {
 body {
   background-color: #f5f5f5;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f05454' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%2330475e' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23f05454' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%232b3c4e' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23f05454' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%2325313e' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23f05454' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%231f262f' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23f05454' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23191c20' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23f05454' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23121212' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
   /* background by SVGBackgrounds.com */
 }
@@ -58,6 +58,7 @@ nav a {
 .nav-button-container {
   display: flex;
   justify-content: space-around;
+  font-size: 20px;
 }
 
 header {
@@ -84,11 +85,42 @@ main {
 }
 
 article {
-  width: 40rem;
+  width: 80vw;
 }
 
 article p {
   font-size: 25px;
   font-style: italic;
   color: #121212;
+}
+
+/* TEST */
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+span {
+  width: 30px;
+  height: 5px;
+  background-color: #121212;
+}
+
+.nav-toggle:hover {
+  cursor: pointer;
+}
+
+.nav-toggle:hover span {
+  position: absolute;
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+
+.nav-toggle:hover span:nth-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.nav-toggle:hover span:nth-child(3) {
+  transform: rotate(-45deg) translate(0, -2px);
 }
