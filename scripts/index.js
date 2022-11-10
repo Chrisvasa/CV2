@@ -6,6 +6,7 @@ async function getData() {
     if (response.ok) {
         let data = await response.json();
 
+        console.log(data.about.location)
         printWork(data.work, "work")
         printWork(data.education, "education")
         printWork(data.skills, "skills")

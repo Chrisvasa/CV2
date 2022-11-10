@@ -1,7 +1,9 @@
 :root {
-  --nav: rgb(36, 36, 36);
-  --main: rgb(27, 27, 27);
+  --header: #2d2f33;
+  --main: #25262a;
   --logo: #f05454;
+  --description: #64666a;
+  --green: #6befa4;
 }
 
 * {
@@ -10,23 +12,8 @@
   box-sizing: border-box;
 }
 
-/* DARK MODE
-body {
-  background-color: #000000;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f05454' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%2330475e' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23f05454' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%232b3c4e' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23f05454' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%2325313e' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23f05454' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%231f262f' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23f05454' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23191c20' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23f05454' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23121212' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
-  background-attachment: fixed;
-  background-size: cover;
-} */
-
-body {
-  background-color: #f5f5f5;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f05454' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%2330475e' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23f05454' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%232b3c4e' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23f05454' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%2325313e' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23f05454' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%231f262f' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23f05454' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23191c20' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23f05454' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23121212' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
-  background-attachment: scroll;
-  background-size: cover;
-  /* background by SVGBackgrounds.com */
-}
-
 .grid-container {
+  background: var(--header);
   display: grid;
   grid-template-rows: 5rem minmax(min-content, 20rem) 1fr;
   height: 100vh;
@@ -42,22 +29,27 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #30475e;
+  color: white;
+}
+
+nav a:hover {
+  color: #6befa48a;
 }
 
 .active {
-  color: #1f2e3d;
+  color: var(--green);
 }
 
 .nav-logo {
   font-weight: 700;
   font-size: 3rem;
-  color: var(--logo);
+  color: var(--green);
 }
 
 .nav-button-container {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
   font-size: 20px;
 }
 
@@ -67,19 +59,26 @@ header {
   flex-wrap: wrap;
 }
 
-header h1 {
-  height: fit-content;
-  color: #f05454;
-  font-size: 7vw;
+header p {
+  max-width: 80vw;
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
 }
 
 header img {
-  width: 10rem;
-  height: fit-content;
-  border-radius: 9999px;
+  background: var(--header);
+  box-shadow: rgba(45, 47, 51, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  width: 45vw;
+  max-width: 450px;
+  height: 45vw;
+  max-height: 450px;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 main {
+  background: var(--main);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,7 +87,8 @@ main {
 
 main > * {
   width: 80vw;
-  border: 1px solid black;
+  color: white;
+  /* border: 1px solid black; */
 }
 
 .work,
@@ -101,16 +101,6 @@ main > * {
 .startDate,
 .endDate {
   width: fit-content;
-}
-
-article {
-  width: 80vw;
-}
-
-article p {
-  font-size: 25px;
-  font-style: italic;
-  color: #121212;
 }
 
 h3 {
@@ -126,6 +116,7 @@ h3 {
 .description {
   width: 100%;
   font-size: 18px;
+  color: var(--description);
 }
 
 .courses {
@@ -163,6 +154,6 @@ span {
   transform: rotate(-45deg) translate(0, -2px);
 }
 
-.hidden {
+/* .hidden {
   visibility: hidden;
-}
+} */
