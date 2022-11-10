@@ -81,7 +81,26 @@ header img {
 
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+main > * {
+  width: 80vw;
+  border: 1px solid black;
+}
+
+.work,
+.education {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.startDate,
+.endDate {
+  width: fit-content;
 }
 
 article {
@@ -92,6 +111,25 @@ article p {
   font-size: 25px;
   font-style: italic;
   color: #121212;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 22px;
+  width: 100%;
+}
+
+.description {
+  width: 100%;
+  font-size: 18px;
+}
+
+.courses {
+  width: 100%;
 }
 
 /* TEST */
@@ -123,4 +161,8 @@ span {
 
 .nav-toggle:hover span:nth-child(3) {
   transform: rotate(-45deg) translate(0, -2px);
+}
+
+.hidden {
+  visibility: hidden;
 }
