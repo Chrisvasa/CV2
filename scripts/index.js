@@ -17,6 +17,7 @@ async function getData() {
 }
 
 getData();
+hamburgerToggle();
 
 function printWork(dataType, title) {
     const out = document.querySelector('main').appendChild(document.createElement('div'))
@@ -29,4 +30,12 @@ function printWork(dataType, title) {
             output.className = key;
         }
     });
+}
+
+function hamburgerToggle() {
+    const hamburgerClick = document.querySelector('.nav-toggle');
+    hamburgerClick.addEventListener('click', function() {
+        const navContainer = document.querySelector('.nav-button-container');
+        navContainer.classList.toggle('hidden');
+    })
 }
