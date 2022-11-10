@@ -8,15 +8,7 @@ async function getData() {
 
         console.log(data.work)
 
-        for (let name in data) {
-            for (let i = 0; i < data[name].length; i++) {
-                /* console.log(data[name]) */
-                console.log(data[name][i])
-                document.querySelector('article').appendChild(document.createElement('p')).textContent = data[name][i].startDate
-            }
-        }
-
-        console.log(data);
+        printWork(data, work)
     }
     else {
         console.log("HTTP-Error:" + response.status);
@@ -24,5 +16,15 @@ async function getData() {
 }
 
 getData();
+
+function printWork(data, dataType) {
+    const objType = dataType;
+    for (let i = 0; i < data.objType.length; i++) {
+        document.querySelector('article').appendChild(document.createElement('h3')).textContent = data.objType[i].name
+        document.querySelector('article').appendChild(document.createElement('h4')).textContent = data.objType[i].startDate
+        document.querySelector('article').appendChild(document.createElement('h4')).textContent = data.objType[i].endDate
+        document.querySelector('article').appendChild(document.createElement('p')).textContent = data.objType[i].description
+    }
+}
 
 //test
