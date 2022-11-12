@@ -71,20 +71,20 @@ span {
   background-color: #121212;
 }
 
-.nav-toggle:after {
+.nav-toggle:hover {
   cursor: pointer;
 }
 
-.nav-toggle:after span {
+.nav-toggle:hover span {
   opacity: 1;
   transform: rotate(45deg) translate(8px, 8px);
 }
 
-.nav-toggle:after span:nth-child(2) {
+.nav-toggle:hover span:nth-child(2) {
   opacity: 0;
 }
 
-.nav-toggle:after span:nth-child(3) {
+.nav-toggle:hover span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -6px);
 }
 
@@ -131,16 +131,45 @@ header img {
 /* MAIN */
 main {
   background: var(--main);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(250px, auto) 1fr;
   gap: 1rem;
 }
 
 main > * {
-  width: 80vw;
   color: white;
-  /* border: 1px solid black; */
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+.main-container > * {
+  height: 40%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.main-container-items {
+  min-height: 60vh;
+}
+
+.main-item-work,
+.main-item-education,
+.main-item-skills,
+.main-item-about {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.main-item-work:hover,
+.main-item-education:hover,
+.main-item-skills:hover,
+.main-item-about:hover {
+  background: var(--header);
 }
 
 .work,
@@ -153,10 +182,6 @@ main > * {
 .startDate,
 .endDate {
   width: fit-content;
-}
-
-h3 {
-  font-size: 24px;
 }
 
 .name {
@@ -174,9 +199,18 @@ h3 {
 .courses {
   width: 100%;
 }
+
+.hide {
+  display: none;
+}
+
+.selected {
+  color: var(--green);
+}
+
 /* END of MAIN */
 /* Media screens */
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 810px) {
   .hidden {
     display: block;
   }
@@ -207,4 +241,25 @@ h3 {
     grid-column: 2 / 3;
     grid-row: 1;
   }
+
+  main {
+    grid-template-columns: 1fr repeat(2, minmax(min-content, 800px)) 1fr;
+    grid-template-rows: 5rem minmax(min-content, 800px);
+  }
+  .main-container {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+
+  .main-container > * {
+    height: 20%;
+  }
+
+  .main-container-items {
+    grid-column-start: 3;
+    grid-row-start: 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
 }
