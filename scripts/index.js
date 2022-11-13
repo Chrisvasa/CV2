@@ -1,14 +1,10 @@
 let url = "data.json";
-let headerDesc = document.querySelector('header').appendChild(document.createElement('p'))
+
 document.querySelector('main').appendChild(document.createElement('div')).className = "main-container";
 document.querySelector('main').appendChild(document.createElement('div')).className = "main-container-items";
 
 getData();
 hamburgerToggle();
-/* setTimeout(() => {
-    readMenuClick();
-}, 150); */ // Temporary fix -- Make it run after getData() is complete
-// Also show loading for slower speeds
 
 async function getData() {
     let response = await fetch(url);
@@ -19,12 +15,24 @@ async function getData() {
         printWork(data.work, "work", "default") // This will be the default shown on page load
         printWork(data.education, "education")
         printWork(data.skills, "skills")
-        headerDesc.textContent = data.about.description;
+        printHeader(data.about, "header")
         readMenuClick();
     }
     else {
         console.log("HTTP-Error:" + response.status);
     }
+}
+
+function printHeader(data, header) {
+
+    const out = document.querySelector('header').appendChild(document.createElement('div'))
+    out.className = header
+    console.log(data)
+        for (const key in data) {
+            let output = document.querySelector(`.${out.className}`).appendChild(document.createElement('p'))
+            output.textContent = data[key];
+            output.className = key;
+        };
 }
 
 // Prints out the given section from the JSON file and gives it suiting class names and titles

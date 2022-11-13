@@ -1,15 +1,8 @@
 {
     "about": {
         "name": "Christopher Vasankari",
-        "label": "Student",
-        "age": "28",
         "email": "Christophervasankari@gmail.com",
         "phone": "0707287726",
-        "location": {
-            "adress": "Hagvägen 43",
-            "postalCode": "19440",
-            "city": "Upplands Väsby"
-        },
         "portfolio": "https://github.com/Chrisvasa",
         "description": "En man på 28 år som för närvarande studerar hos ChasAcademy i Stockholm. Alltid haft ett stort intresse för datorer, men först nu tagit klivet att omvandla detta intresse till en framtida karriär. "
 
@@ -118,7 +111,7 @@
                 "CSS",
                 "JavaScript"
             ],
-            "image": "images/CV.png"
+            "image": "images/Number.jpg"
         }
     ]
 }

@@ -1,14 +1,10 @@
 let url = "data.json";
-let headerDesc = document.querySelector('header').appendChild(document.createElement('p'))
+let headerDesc = document.querySelector('header').appendChild(document.createElement('img'))
 document.querySelector('main').appendChild(document.createElement('div')).className = "main-container";
 document.querySelector('main').appendChild(document.createElement('div')).className = "main-container-items";
 
 getData();
 hamburgerToggle();
-/* setTimeout(() => {
-    readMenuClick();
-}, 150); */ // Temporary fix -- Make it run after getData() is complete
-// Also show loading for slower speeds
 
 async function getData() {
     let response = await fetch(url);
@@ -18,7 +14,8 @@ async function getData() {
 
         printWork(data.projects, "Project1", 0, "default") // This will be the default shown on page load
         printWork(data.projects, "Project2", 1)
-        readMenuClick();
+        headerDesc.src = data.projects[0].image
+        readMenuClick(data.projects);
     }
     else {
         console.log("HTTP-Error:" + response.status);
@@ -64,11 +61,17 @@ function hamburgerToggle() {
 }
 
 // Reads which of the menu items the user has clicked
-function readMenuClick() {
+function readMenuClick(data) {
     const mainMenuItems = document.querySelector('.main-container').children;
 
     Array.from(mainMenuItems).forEach(function(mainMenuItem) {
         mainMenuItem.addEventListener('click', function() {
+            if (mainMenuItem.className === "main-item-Project1") {
+                headerDesc.src = data[0].image
+            }
+            else {
+                headerDesc.src = data[1].image
+            }
             hideMenuItem(mainMenuItems);
             showMenuItem(mainMenuItem);
         })
@@ -95,7 +98,6 @@ function showMenuItem(menuItem) {
     const split = menuItem.className.split('-')
     const lastWord = split[split.length -1]
     const testing = document.querySelector(`.${lastWord}`)
-    console.log(menuItem)
 
     testing.classList.remove('hide');
     menuItem.classList.add('selected')

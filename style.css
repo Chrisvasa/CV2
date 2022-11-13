@@ -6,8 +6,6 @@
   --green: #6befa4;
 }
 
-/* 64666a */
-
 * {
   margin: 0;
   padding: 0;
@@ -129,9 +127,12 @@ header {
   justify-items: center;
 }
 
-header p {
+.header {
+  grid-column-start: 1;
+  display: flex;
+  flex-direction: column;
   max-width: 80vw;
-  font-size: 25px;
+  font-size: 20px;
   font-family: "Roboto", sans-serif;
   text-align: center;
   color: #fff;
@@ -249,7 +250,6 @@ main > * {
 .selected {
   color: var(--green);
 }
-
 /* END of MAIN */
 
 /* Media screens */
@@ -303,7 +303,7 @@ main > * {
     grid-column: 3/4;
   }
 
-  header p {
+  .header {
     grid-column: 2 / 3;
     grid-row: 1;
   }
