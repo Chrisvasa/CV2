@@ -107,7 +107,7 @@
                 "CSS",
                 "JavaScript"
             ],
-            "image": "https://github.com/Chrisvasa/CV2/blob/main/images/Rockpaperscissors.jpg"
+            "image": "/CV2/main/images/Rockpaperscissors.jpg"
         },
         {
             "name": ".NET",
