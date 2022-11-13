@@ -105,7 +105,7 @@
         {
             "name": "Number Guessing Game",
             "description": "Ett spel som går ut på att gissa ett nummer mellan 1-100. På fem försök eller mindre.",
-            "url": "https://github.com/Chrisvasa/CV2-Projects/tree/main/RockPaperScissors",
+            "url": "https://github.com/Chrisvasa/CV2-Projects/tree/main/NumberGuessingGame",
             "keywords": [
                 "HTML",
                 "CSS",
