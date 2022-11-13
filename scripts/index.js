@@ -5,9 +5,9 @@ document.querySelector('main').appendChild(document.createElement('div')).classN
 
 getData();
 hamburgerToggle();
-setTimeout(() => {
+/* setTimeout(() => {
     readMenuClick();
-}, 150); // Temporary fix -- Make it run after getData() is complete
+}, 150); */ // Temporary fix -- Make it run after getData() is complete
 // Also show loading for slower speeds
 
 async function getData() {
@@ -20,6 +20,7 @@ async function getData() {
         printWork(data.education, "education")
         printWork(data.skills, "skills")
         headerDesc.textContent = data.about.description;
+        readMenuClick();
     }
     else {
         console.log("HTTP-Error:" + response.status);

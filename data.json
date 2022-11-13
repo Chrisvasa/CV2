@@ -82,7 +82,7 @@
     "skills": [
         {
             "name": "Webbutveckling",
-            "level": "Grundlig",
+            "level": "Grundlig nivå",
             "keywords": [
                 "HTML",
                 "CSS",
@@ -91,7 +91,7 @@
         },
         {
             "name": ".NET",
-            "level": "Grundlig",
+            "level": "Grundlig nivå",
             "keywords": [
                 "C#"
             ]
@@ -105,14 +105,16 @@
                 "HTML",
                 "CSS",
                 "JavaScript"
-            ]
+            ],
+            "image": "images/cv.png"
         },
         {
             "name": ".NET",
             "description": "",
             "keywords": [
                 "C#"
-            ]
+            ],
+            "image": "images/cvbild.png"
         }
     ]
 }

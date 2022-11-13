@@ -16,7 +16,7 @@
   background: var(--header);
   display: grid;
   grid-template-rows: 5rem minmax(min-content, 20rem) 1fr;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* NAVBAR */
@@ -26,6 +26,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 
 nav a {
@@ -42,9 +43,13 @@ nav a:hover {
 }
 
 .nav-logo {
-  font-weight: 700;
+  font-family: "Lobster", cursive;
   font-size: 3rem;
   color: var(--green);
+}
+
+.mobile {
+  font-size: 5vh;
 }
 
 .desktop {
@@ -65,7 +70,7 @@ nav a:hover {
   flex-direction: column;
   gap: 0.3rem;
 }
-span {
+.nav-toggle span {
   width: 30px;
   height: 5px;
   background-color: #121212;
@@ -93,6 +98,7 @@ span {
 }
 /* HAMBURGER MENU END 
    END OF NAVBAR */
+
 /* Download button */
 .btnDown {
   background: var(--green);
@@ -101,7 +107,7 @@ span {
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
     rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-/* Header */
+/* HEADER */
 header {
   display: grid;
   grid-auto-rows: min-content;
@@ -112,11 +118,12 @@ header {
 header p {
   max-width: 80vw;
   font-size: 25px;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   color: #fff;
 }
 
-header img {
+header .profile-pic {
   background: var(--header);
   box-shadow: rgba(45, 47, 51, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   width: 45vw;
@@ -144,6 +151,8 @@ main > * {
 .main-container {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  gap: 1rem;
 }
 .main-container > * {
   height: 40%;
@@ -152,6 +161,7 @@ main > * {
 
 .main-container-items {
   min-height: 60vh;
+  width: 100%;
 }
 
 .main-item-work,
@@ -162,7 +172,8 @@ main > * {
   align-items: center;
   padding: 1rem;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .main-item-work:hover,
@@ -182,22 +193,36 @@ main > * {
 .startDate,
 .endDate {
   width: fit-content;
+  margin-right: 0.5rem;
 }
 
 .name {
   font-weight: 500;
-  font-size: 22px;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
   width: 100%;
 }
 
 .description {
   width: 100%;
-  font-size: 18px;
+  font-size: 1.3rem;
+  font-family: "Inter", sans-serif;
   color: var(--description);
 }
 
 .courses {
   width: 100%;
+  font-size: 1.2rem;
+}
+
+.level {
+  color: var(--description);
+  font-size: 1.1rem;
+}
+
+.keywords {
+  font-family: monospace;
+  font-size: 1.3rem;
 }
 
 .hide {
@@ -209,6 +234,54 @@ main > * {
 }
 
 /* END of MAIN */
+
+/* PORTFOLIO SITE */
+/* PORTFOLIO HEADER */
+.portfolio-header {
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / -1;
+}
+
+.portfolio-container {
+  transition: transform 1s;
+}
+
+.portfolio-header img {
+  display: none;
+  width: 50%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+}
+
+.slider-dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.slider-dots-container span {
+  height: 10px;
+  width: 45px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.slider-dots-container span:hover {
+  cursor: pointer;
+  background: var(--green);
+}
+
+.activated {
+  display: block;
+  background: var(--green);
+}
+
+/* END OF PORTFOLIO HEADER */
+/* END OF PORTFOLIO SITE */
 /* Media screens */
 @media screen and (min-width: 810px) {
   .hidden {
@@ -221,6 +294,7 @@ main > * {
 
   .desktop {
     display: block;
+    font-size: 4vh;
   }
 
   .mobile {
@@ -243,7 +317,7 @@ main > * {
   }
 
   main {
-    grid-template-columns: 1fr repeat(2, minmax(min-content, 800px)) 1fr;
+    grid-template-columns: 1fr repeat(2, minmax(300px, 800px)) 1fr;
     grid-template-rows: 5rem minmax(min-content, 800px);
   }
   .main-container {
@@ -262,4 +336,7 @@ main > * {
 }
 
 @media screen and (min-width: 1200px) {
+  main {
+    grid-template-columns: 1fr minmax(400px, 800px) minmax(400px, 800px) 1fr;
+  }
 }
