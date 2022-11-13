@@ -106,7 +106,7 @@
                 "CSS",
                 "JavaScript"
             ],
-            "image": "images/cv.png"
+            "image": "images/CV.png"
         },
         {
             "name": ".NET",
@@ -114,7 +114,7 @@
             "keywords": [
                 "C#"
             ],
-            "image": "CV2/images/cvbild.png"
+            "image": "CV2/images/CVbild.png"
         }
     ]
 }
