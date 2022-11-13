@@ -99,20 +99,24 @@
     ],
     "projects": [
         {
-            "name": "Webbutveckling",
-            "description": "",
+            "name": "Rock Paper Scissors",
+            "description": "Ett projekt där jag byggde en liten version utav Sten-Sax-Påse",
+            "url": "https://github.com/Chrisvasa/CV2-Projects/tree/main/RockPaperScissors",
             "keywords": [
                 "HTML",
                 "CSS",
                 "JavaScript"
             ],
-            "image": "images/CV.png"
+            "image": "https://github.com/Chrisvasa/CV2/blob/main/images/Rockpaperscissors.jpg"
         },
         {
             "name": ".NET",
-            "description": "",
+            "description": "testtest",
+            "url": "https://github.com/Chrisvasa/CV2-Projects/tree/main/RockPaperScissors",
             "keywords": [
-                "C#"
+                "HTML",
+                "CSS",
+                "JavaScript"
             ],
             "image": "CV2/images/CVbild.png"
         }

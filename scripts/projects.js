@@ -11,22 +11,67 @@ async function getData() {
         let data = await response.json();
 
         getImage(data.projects);
-        getCurrentSlide();
+        getCurrentSlide(data.projects);
+        printProject(data.projects, "projects")
     }
     else {
         console.log("HTTP-Error:" + response.status);
     }
 }
 
+function printProject(dataType, title) {
+    let i = 0;
+
+    dataType.forEach(value => {
+        const out = document.querySelector('.portfolio-main-items').appendChild(document.createElement('div'))
+        out.className = title + i;
+        i++;
+        for (const key in value) {
+            let output = document.querySelector(`.${out.className}`).appendChild(document.createElement('p'))
+            if (key == "image") {
+                break;
+            }
+            output.textContent = value[key];
+            output.className = key;
+    }
+})
+}
+
 //Image slider
-function getCurrentSlide() {
+function getCurrentSlide(data) {
     const sliderDots = document.querySelector('.slider-dots-container').children;
     Array.from(sliderDots).forEach(function(item) {
-        console.log("test")
         item.addEventListener('click', function() {
-            item.classList.add("activated")
+            console.log(item)
+            hideMenuItem(sliderDots)
+            item.classList.add('activated')
+            showMenuItem(item)
         })
     })
+}
+
+function hideMenuItem(mainMenuItems) {
+    const subMenuItems = document.querySelector('.portfolio-main-items').children;
+
+    Array.from(mainMenuItems).forEach(function(mainMenuItem) {
+        mainMenuItem.classList.remove('activated')
+    });
+
+    Array.from(subMenuItems).forEach(function(item) {
+        item.classList.add('hide');
+    })
+}
+
+function showMenuItem(menuItem) {
+    const subMenuItems = document.querySelector('.portfolio-main-items').children;
+    
+    const split = subMenuItems.className.split('-')
+    const lastWord = split[split.length -1]
+    const testing = document.querySelector(`.${lastWord}`)
+    console.log(testing)
+
+    menuItem.classList.remove('hide')
+    menuItem.classList.add('activated')
 }
 
 // Toggle for the hamburger menu
@@ -45,6 +90,7 @@ function getImage(data) {
         const slider = document.querySelector('.slider-dots-container').appendChild(document.createElement('span'));
 
         portfolioImage.src = data[i].image;
+        /* console.log(data[i].image) */
         portfolioImage.className = i;
         slider.className = i;
 
