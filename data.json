@@ -100,25 +100,25 @@
     "projects": [
         {
             "name": "Rock Paper Scissors",
-            "description": "Ett projekt där jag byggde en liten version utav Sten-Sax-Påse",
+            "description": "Ett projekt där jag byggde en liten version utav Sten-Sax-Påse. Man tävlar mot datorn och målet är försten till 10 poäng. Datorns val slumpas med hjälp av Math.Random",
             "url": "https://github.com/Chrisvasa/CV2-Projects/tree/main/RockPaperScissors",
             "keywords": [
                 "HTML",
                 "CSS",
                 "JavaScript"
             ],
-            "image": "CV2/images/Rockpaperscissors.jpg"
+            "image": "images/Rockpaperscissors.jpg"
         },
         {
-            "name": ".NET",
-            "description": "testtest",
+            "name": "Number Guessing Game",
+            "description": "Ett spel som går ut på att gissa ett nummer mellan 1-100. På fem försök eller mindre.",
             "url": "https://github.com/Chrisvasa/CV2-Projects/tree/main/RockPaperScissors",
             "keywords": [
                 "HTML",
                 "CSS",
                 "JavaScript"
             ],
-            "image": "CV2/images/CVbild.png"
+            "image": "images/CV.png"
         }
     ]
 }
