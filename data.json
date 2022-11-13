@@ -29,7 +29,7 @@
     },
     {
         "name": "Taksnöskottare - Märsta kommun",
-        "startDate": "2012-11",
+        "startDate": "2012",
         "endDate": "2014",
         "description": "Säsongsarbetade som snöskottare på olika lokationer i Märsta."
     }],
@@ -114,7 +114,7 @@
             "keywords": [
                 "C#"
             ],
-            "image": "images/cvbild.png"
+            "image": "CV2/images/cvbild.png"
         }
     ]
 }

@@ -2,9 +2,11 @@
   --header: #2d2f33;
   --main: #25262a;
   --logo: #f05454;
-  --description: #64666a;
+  --description: #919296;
   --green: #6befa4;
 }
+
+/* 64666a */
 
 * {
   margin: 0;
@@ -194,6 +196,7 @@ main > * {
 .endDate {
   width: fit-content;
   margin-right: 0.5rem;
+  font-style: italic;
 }
 
 .name {
