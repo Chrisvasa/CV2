@@ -94,6 +94,7 @@
         {
             "name": "Rock Paper Scissors",
             "description": "Ett projekt där jag byggde en liten version utav Sten-Sax-Påse. Man tävlar mot datorn och målet är försten till 10 poäng. Datorns val slumpas med hjälp av Math.Random",
+            "link": "https://chrisvasa.github.io/CV2-Projects/",
             "url": "https://github.com/Chrisvasa/CV2-Projects/tree/main/RockPaperScissors",
             "keywords": [
                 "HTML",
